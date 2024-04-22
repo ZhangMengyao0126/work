@@ -1,53 +1,63 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzhang <mzhang@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 14:09:42 by mzhang            #+#    #+#             */
-/*   Updated: 2024/04/22 14:11:54 by mzhang           ###   ########.fr       */
+/*   Created: 2024/04/22 14:06:14 by mzhang            #+#    #+#             */
+/*   Updated: 2024/04/22 14:06:21 by mzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include<stdio.h>
 
 size_t ft_strlen(char *str)
 {
     size_t i;
+    
     i = 0;
     while(str[i] != '\0')
     {
         i++;
     }
-    return i;
+    return(i);
 }
 
-size_t ft_strlcpy(char *dst, char *src, size_t dstsize)
+size_t strlcat(char *dest, char *src, size_t size)
 {
-    size_t srcsize;
+    size_t destsize;
     size_t i;
+    size_t j;
     
-    if(!dst || !src)
-        return (0);
+    i = 0;
+    j = 0;
+    destsize = ft_strlen(dest);
     
-    srcsize = ft_strlen(src);
-    if(dstsize != 0)
+    if(!dest || !size)
+        return(0);
+    if(size != 0)
     {
-        while(src[i] != '\0' && i < dstsize-1)
+        while(dest[i] != '\0')
         {
-            dst[i] = src[i];
             i++;
         }
-        dst[i] = '\0';
+        while(j < size - destsize -1)
+        {
+            dest[i] = src[j];
+            j++;
+        }
+        dest[j] = '\0';
     }
-    return (srcsize);
+    destsize = ft_strlen(dest);
+    return (destsize);
 }
 
 int main(void)
 {
-    char dst[20] = "Sad dog" ;
-    char src[23] = "HappyHappyHappy";
-    ft_strlcpy(dst, src, 20);
-    printf("%s\n%zu", dst, ft_strlcpy(dst, src, 20));
+    char dest[50] = "Sad dog";
+    char src[30] = "will find her true cat.";
+    strlcat(dest, src, 20);
+    printf("%s\n%zu", dest, strlcat(dest, src, 20));
 }
