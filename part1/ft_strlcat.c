@@ -26,7 +26,6 @@ size_t ft_strlen(char *str)
 
 size_t ft_strlcat(char *dest, char *src, size_t dstsize)
 {
-    size_t dstlenfinal;
     size_t len;
     size_t i;
     size_t j;

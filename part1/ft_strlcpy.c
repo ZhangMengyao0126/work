@@ -25,13 +25,13 @@ size_t ft_strlen(char *str)
 
 size_t ft_strlcpy(char *dst, char *src, size_t dstsize)
 {
-    size_t srcsize;
+    size_t srclen;
     size_t i;
     
     if(!dst || !src)
         return (0);
     
-    srcsize = ft_strlen(src);
+    srclen = ft_strlen(src);
     i = 0;
     if(dstsize != 0)
     {
@@ -42,7 +42,7 @@ size_t ft_strlcpy(char *dst, char *src, size_t dstsize)
         }
         dst[i] = '\0';
     }
-    return (srcsize);
+    return (srclen);
 }
 
 int main(void)
