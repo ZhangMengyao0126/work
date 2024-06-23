@@ -7,8 +7,8 @@ int ft_tolower(int c)
 	return(c);
 }
 
-int main(void)
+/*int main(void)
 {
 	int c = 'A';
 	printf("%c",ft_tolower(c));
-}
+}*/

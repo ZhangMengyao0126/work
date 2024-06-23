@@ -1,6 +1,6 @@
 #include "libft.h"
 
-char *ft_substr(char *s, unsigned int start, size_t len)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
     unsigned int i;
     char *new_str;
@@ -17,8 +17,8 @@ char *ft_substr(char *s, unsigned int start, size_t len)
     return (new_str);
 }
 
-int main (void)
+/*int main (void)
 {
     char s[50] = "Hello,World!";
     printf("%s",ft_substr(s, 6, 5));   
-}
+}*/

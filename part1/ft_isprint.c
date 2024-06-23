@@ -20,8 +20,8 @@ int ft_isprint(int c)
         return (0);
 }
 
-int main(void)
+/*int main(void)
 {
     int c = '+';
     printf("%d",ft_isprint(c));
-}
+}*/

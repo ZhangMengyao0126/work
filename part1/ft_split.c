@@ -1,21 +1,9 @@
 #include "libft.h"
 
-size_t	ft_strlen(const char*str)
+static int count_words(const char *s, char c)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-static int count_word(const char *s, char c)
-{
-    unsigned int i;
-    unsigned int in_word;
+    int i;
+    int in_word;
     
     i = 0;
     in_word = 0;
@@ -35,10 +23,10 @@ static int count_word(const char *s, char c)
     return (i);
 }
 
-static char *word_dup(const char *s, unsigned int start, unsigned int finish)
+static char *word_dup(const char *s, int start, int finish)
 {
     char *word;
-    unsigned int i;
+    int i;
     
     i = 0;
     word = (char *)malloc(finish - start + 1);
@@ -60,7 +48,7 @@ char **ft_split(char const *s, char c)
     size_t word_start;
     int in_word;
     
-    if(!s || !(split = malloc((count_word(s, c) + 1) * sizeof(char *))))
+    if(!s || !(split = malloc((count_words(s, c) + 1) * sizeof(char *))))
         return (0);
     i = 0;
     j = 0;
@@ -84,7 +72,7 @@ char **ft_split(char const *s, char c)
     return(split);
 }
 
-int main (void)
+/*int main (void)
 {
     char s[50] = "Hello Word This Is A Test ";
     char c = ' ';
@@ -100,4 +88,4 @@ int main (void)
         i++;
     }
     free(result);
-}
+}*/

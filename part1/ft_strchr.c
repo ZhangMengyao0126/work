@@ -21,7 +21,7 @@ char *ft_strchr(const char *s, int c)
     return (0);
 }
 
-int main()
+/*int main()
 {
     const char str[] = "Hello World";
     const char c = 'o';
@@ -30,4 +30,4 @@ int main()
     result = ft_strchr(str, c);
     printf("%s",result);
     return(0);
-}
+}*/

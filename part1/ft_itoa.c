@@ -29,8 +29,8 @@ char *ft_itoa(int n)
     return (str);
 }
 
-int main (void)
+/*int main (void)
 {
     int n = -2147483648;
     printf("%s",ft_itoa(n));
-}
+}*/

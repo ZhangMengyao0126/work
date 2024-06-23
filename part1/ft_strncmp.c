@@ -29,9 +29,9 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 }
 
-int main(void)
+/*int main(void)
 {
     char s1[20] = "applebanana";
     char s2[15] = "applobanana";
     printf("%d",ft_strncmp(s1, s2, 6));
-}
+}*/

@@ -23,7 +23,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     while(haystack[h] != '\0' && h < len)
     {
         n = 0;
-        while(haystack[h+n] == needle[n] && (h+n) < len)
+        while(haystack[h + n] == needle[n] && (h + n) < len)
         {
             if(needle[n + 1] == '\0')
                 return((char *)&haystack[h]);
@@ -34,11 +34,11 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     return (0);
 }
 
-int main(void)
+/*int main(void)
 {
     const char *haystack = "Hello World";
     const char *needle = "orld";
     size_t len = 11;
     char *result = ft_strnstr(haystack, needle, len);
     printf("%s",result);
-}
+}*/

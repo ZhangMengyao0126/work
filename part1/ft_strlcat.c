@@ -12,19 +12,7 @@
 
 #include "libft.h"
 
-size_t ft_strlen(char *str)
-{
-    size_t i;
-    
-    i = 0;
-    while(str[i] != '\0')
-    {
-        i++;
-    }
-    return(i);
-}
-
-size_t ft_strlcat(char *dest, char *src, size_t dstsize)
+size_t ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
     size_t len;
     size_t i;
@@ -54,9 +42,9 @@ size_t ft_strlcat(char *dest, char *src, size_t dstsize)
     return (len);
 }
 
-int main(void)
+/*int main(void)
 {
     char dest[50] = "Brave dog";
     char src[30] = " can face the whole new world.";
     printf("%s\n%zu", dest, ft_strlcat(dest, src, 50));
-}
+}*/

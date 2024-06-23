@@ -12,21 +12,24 @@
 
 #include "libft.h"
 
-void ft_memset(void *b, int c, size_t len)
+void *ft_memset(void *b, int c, size_t len)
 {
-    char *ptr = (char *)b;
+    char *ptr;
+    
+    ptr = (char *)b;
     while(len > 0)
     {
         *ptr = c;
         ptr++;
         len--;
     }
+    return(b);
 }
 
-int main()
+/*int main()
 {
     char str[100] = "Hello World!";
     ft_memset(str + 6, 'o', 6);
     printf("After memset(): %s\n", str);
     return 0;
-}
+}*/

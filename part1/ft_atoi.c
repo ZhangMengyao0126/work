@@ -38,10 +38,10 @@ int	ft_atoi(const char *str)
 	return (sign * result);
 }
 
-int main(void)
+/*int main(void)
 {
     char str[] = " -12345abc";
     int result = ft_atoi(str);
     printf ("%d ", result);
     return 0;
-}
+}*/

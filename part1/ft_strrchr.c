@@ -1,15 +1,5 @@
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
-{
-    size_t i;
-    
-    i = 0;
-    while(str[i] != '\0')
-        i++;
-    return (i);
-}
-
 char *ft_strrchr(const char *s, int c)
 {
     const char *ini;
@@ -26,7 +16,7 @@ char *ft_strrchr(const char *s, int c)
 }
 
 
-int main()
+/*int main()
 {
     const char *s = "Hello World";
     const char c = 'o';
@@ -34,4 +24,4 @@ int main()
     
     result = ft_strrchr(s,c);
     printf("%s",result);
-}
+}*/

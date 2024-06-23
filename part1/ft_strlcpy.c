@@ -12,17 +12,6 @@
 
 #include "libft.h"
 
-size_t ft_strlen(char *str)
-{
-    size_t i;
-    i = 0;
-    while(str[i] != '\0')
-    {
-        i++;
-    }
-    return i;
-}
-
 size_t ft_strlcpy(char *dst, char *src, size_t dstsize)
 {
     size_t srclen;
@@ -35,7 +24,7 @@ size_t ft_strlcpy(char *dst, char *src, size_t dstsize)
     i = 0;
     if(dstsize != 0)
     {
-        while(src[i] != '\0' && i < dstsize-1)
+        while(src[i] != '\0' && i < (dstsize-1))
         {
             dst[i] = src[i];
             i++;
@@ -45,10 +34,10 @@ size_t ft_strlcpy(char *dst, char *src, size_t dstsize)
     return (srclen);
 }
 
-int main(void)
+/*int main(void)
 {
     char dst[20] = "Sad dog" ;
     char src[23] = "HappyHappyHappy";
     ft_strlcpy(dst, src, 20);
     printf("%s\n%zu", dst, ft_strlcpy(dst, src, 20));
-}
+}*/
